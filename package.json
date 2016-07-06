@@ -1,0 +1,14 @@
+{
+  "name": "register-module",
+  "version": "0.0.1",
+  "description": "Set the Node.js module search path",
+  "keywords": ["require", "module", "NODE_PATH"],
+  "homepage": "https://github.com/vinsonchuong/register-module",
+  "bugs": "https://github.com/vinsonchuong/register-module/issues",
+  "license": "MIT",
+  "author": "Vinson Chuong <vinsonchuong@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinsonchuong/register-module"
+  }
+}
