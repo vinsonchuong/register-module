@@ -1,7 +1,7 @@
 {
   "name": "register-module",
   "version": "0.0.1",
-  "description": "Set the Node.js module search path",
+  "description": "Register a module with Node.js for more concise imports",
   "keywords": ["require", "module", "NODE_PATH"],
   "homepage": "https://github.com/vinsonchuong/register-module",
   "bugs": "https://github.com/vinsonchuong/register-module/issues",
