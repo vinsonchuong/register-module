@@ -8,10 +8,9 @@ Register a module with Node.js for more concise imports.
 ## Usage
 ```js
 require('register-module')({
-  project: {
-    path: '/home/vinsonchuong/project',
-    main: 'entry.js'
-  }
+  name: 'project',
+  path: '/home/vinsonchuong/project',
+  main: 'entry.js'
 });
 
 // Resolves to '/home/vinsonchuong/project/entry.js'
