@@ -6,7 +6,11 @@ const modules = [];
 const oldResolveFilename = Module._resolveFilename;
 Module._resolveFilename = function(request, parent, isMain) {
   for (const {name, path, main} of modules) {
-    if (request.startsWith(`${name}/`) || request === name) {
+    if (request === name) {
+      return oldResolveFilename(`${path}/${main}`, parent, isMain);
+    }
+
+    if (request.startsWith(`${name}/`)) {
       return oldResolveFilename(request.replace(name, path), parent, isMain);
     }
   }
@@ -14,11 +18,6 @@ Module._resolveFilename = function(request, parent, isMain) {
   return oldResolveFilename(request, parent, isMain);
 };
 
-module.exports = function(modules) {
-  Object.assign(registeredModules, modules);
-
-  for (const name of Object.keys(modules)) {
-    const {path, main} = modules[name];
-    console.log(name, path, main);
-  }
+module.exports = function(moduleDefinition) {
+  modules.push(moduleDefinition);
 };
